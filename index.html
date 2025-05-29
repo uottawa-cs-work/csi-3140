@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Raman</title>
+  </head>
+  <body>
+    <a href="https://www.uottawa.ca/en" target="_blank">
+      <img
+        width="300"
+        src="https://www.uottawa.ca/about-us/sites/g/files/bhrskd336/files/2023-04/ver-logo-left.jpg"
+        alt="uOttawa logo"
+      />
+    </a>
+
+    <h1>Raman Gupta</h1>
+
+    <img width="300" src="./profile.jpeg" alt="profile-picture" />
+    <br />
+    <label for="email">Email: </label>
+    <a id="email" href="mailto:rgupt054@uottawa.ca">rgupt054@uottawa.ca</a>
+
+    <nav>
+      <a href="#about">About</a> | <a href="#skills">Skills</a> |
+      <a href="#feedback">Feedback</a>
+    </nav>
+
+    <section>
+      <h2 id="about">About Me</h2>
+      <p>
+        I'm a third year Computer Science Student at uOttawa.
+        <mark>I like web development.</mark>
+      </p>
+    </section>
+
+    <section>
+      <h2 id="skills">Skills</h2>
+      <table border="1">
+        <tr>
+          <th>Skill</th>
+          <th>Level</th>
+          <th>Proficiency</th>
+        </tr>
+
+        <tr>
+          <td>HTML</td>
+          <td>9</td>
+          <td>
+            <meter min="0" max="10" value="9"></meter>
+          </td>
+        </tr>
+
+        <tr>
+          <td>CSS</td>
+          <td>9</td>
+          <td>
+            <meter min="0" max="10" value="9"></meter>
+          </td>
+        </tr>
+
+        <tr>
+          <td>JS</td>
+          <td>10</td>
+          <td>
+            <meter min="0" max="10" value="10"></meter>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Preferences</h2>
+      <form autocomplete="on">
+        <p>Preferred Work Environment</p>
+        <input id="remote" type="radio" name="work-env" value="remote" />
+        <label for="remote">Remote</label>
+        <br />
+
+        <input id="hybrid" type="radio" name="work-env" value="hybrid" />
+        <label for="hybrid">Hybrid</label>
+        <br />
+
+        <input id="in-person" type="radio" name="work-env" value="in-person" />
+        <label for="in-person">In-person</label>
+
+        <p>Interests</p>
+        <input id="web-dev" type="checkbox" name="work-env" value="web-dev" />
+        <label for="web-dev">Web Development</label>
+        <br />
+
+        <input id="devops" type="checkbox" name="work-env" value="devops" />
+        <label for="devops">DevOps</label>
+        <br />
+
+        <input id="ai" type="checkbox" name="work-env" value="ai" />
+        <label for="ai">AI</label>
+        <br />
+
+        <label for="favourite-languages">Favourite Programming language:</label>
+        <input
+          list="favourite-languages"
+          id="language-choice"
+          name="language-choice"
+        />
+
+        <datalist id="favourite-languages">
+          <option value="TypeScript"></option>
+          <option value="Java"></option>
+          <option value="Python"></option>
+          <option value="Lua"></option>
+          <option value="Bash"></option>
+        </datalist>
+
+        <br />
+        <input
+          type="text"
+          name="username"
+          placeholder="Enter your name"
+          autocomplete="on"
+        />
+      </form>
+    </section>
+
+    <section>
+      <h2 id="feedback">Feedback</h2>
+      <details>
+        <summary>Why did you choose this field?</summary>
+        I like web development
+      </details>
+    </section>
+  </body>
+</html>
