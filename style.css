@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: Arial, Helvetica, sans-serif, Helvetica, sans-serif;
+  background: url(https://professionals.tarkett.com/media/img/M/THH_25094225_25187225_001.jpg);
+  color: #333;
+}
+
+header {
+  position: relative;
+  padding: 10px;
+  background: linear-gradient(to right, #003366, #0059b3);
+  color: white;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
+}
+
+#uottawa-logo {
+  border: solid darkred 12px;
+  height: auto;
+  width: 100px;
+}
+
+#names {
+  text-align: center;
+  font-size: 2em;
+  text-shadow: 2px 2px #000;
+}
+
+.emails {
+  text-align: center;
+  font-size: 1em;
+}
+
+.emails a {
+  color: white;
+}
+
+.links {
+  text-align: center;
+}
+
+.links a {
+  color: #cce6ff;
+  text-decoration: none;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+.links a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.profiles img {
+  height: 75px;
+  width: auto;
+}
+
+.about {
+  border: solid;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#about-header {
+  color: darkred;
+  font-family: Roboto;
+}
+
+.skills {
+  border: solid;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#skills-header {
+  color: darkred;
+  font-family: Roboto;
+}
+
+table {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+
+th,
+td {
+  text-align: center;
+  border: 1px solid black;
+}
+
+.preference-form {
+  border: solid;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#preference-form-header {
+  color: darkred;
+  font-family: Roboto;
+}
+
+.feedback {
+  border: solid;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#feedback-header {
+  color: darkred;
+  font-family: Roboto;
+}
+
+#interests {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#fav-programming-language {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#name-input-form {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#range-input-form {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
