@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Assignment I - Question III</title>
+  </head>
+  <body>
+    <h1>User Registration</h1>
+
+    <form>
+      <p>
+        <label for="firstName">First Name:</label>
+        <br />
+        <input type="text" id="firstName" name="firstName" required />
+      </p>
+
+      <p>
+        <label for="lastName">Last Name:</label>
+        <br />
+        <input type="text" id="lastName" name="lastName" required />
+      </p>
+
+      <p>
+        <label for="email">Email:</label>
+        <br />
+        <input type="email" id="email" name="email" required />
+      </p>
+
+      <details>
+        <summary>Optional Survey Question</summary>
+        <label for="universityYear">What is your year in university?</label>
+        <br />
+        <select id="universityYear" name="universityYear">
+          <option value="">--Please choose an option--</option>
+          <option value="notYet">Not yet in university</option>
+          <option value="freshman">Freshman</option>
+          <option value="sophomore">Sophomore</option>
+          <option value="junior">Junior</option>
+          <option value="senior">Senior</option>
+          <option value="graduate">Graduate</option>
+        </select>
+      </details>
+
+      <p>
+        <input type="submit" value="Register" />
+        <input type="reset" value="Reset" />
+      </p>
+    </form>
+  </body>
+</html>
