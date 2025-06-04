@@ -126,9 +126,12 @@ while (currentCalculation < numberOfCalculations) {
       break;
 
     case "/":
-      if (secondNumber === 0) alert("Cannot divide by 0");
-      break;
+      if (secondNumber === 0) {
+        alert("Cannot divide by 0");
+        break;
+      }
       alert(`Result: ${firstNumber / secondNumber}`);
+      break;
   }
   currentCalculation++;
 }
