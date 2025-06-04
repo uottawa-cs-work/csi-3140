@@ -1,0 +1,17 @@
+h1 {
+  -webkit-text-stroke: 1px black;
+  -webkit-text-fill-color: white;
+}
+
+.description {
+  column-count: 2;
+  column-gap: 40px;
+}
+
+.calculator-icon {
+  width: 100px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  animation: floatAround 20s ease-in-out infinite;
+}
