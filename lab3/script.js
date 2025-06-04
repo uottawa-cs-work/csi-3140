@@ -103,6 +103,8 @@ let currentCalculation = 0;
 
 const OPERATORS = ["+", "-", "*", "/"];
 while (currentCalculation < numberOfCalculations) {
+  alert(`Calculation ${currentCalculation + 1} of ${numberOfCalculations}`);
+
   const firstNumber = getFloatInput("Enter the first number:");
   const operator = getOperatorInput(OPERATORS, "Enter an operator");
   const secondNumber = getFloatInput("Enter the second number:");
