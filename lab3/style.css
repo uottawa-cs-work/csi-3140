@@ -1,17 +1,27 @@
+body {
+  background-color: #edf6fb;
+  padding: 1rem;
+}
+
 h1 {
   -webkit-text-stroke: 1px black;
   -webkit-text-fill-color: white;
+  background-color: #333333;
+  padding: 1rem;
+  text-align: center;
 }
 
 .description {
-  column-count: 2;
-  column-gap: 40px;
+  display: flex;
+  gap: 4rem;
+  padding-inline: 24rem;
+  padding-block: 12rem;
 }
 
 .calculator-icon {
   width: 100px;
   position: absolute;
-  top: 20px;
+  top: 32rem;
   left: 20px;
   animation: floatAround 20s ease-in-out infinite;
 }
