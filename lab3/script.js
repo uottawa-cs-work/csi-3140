@@ -104,10 +104,7 @@ let currentCalculation = 0;
 const OPERATORS = ["+", "-", "*", "/"];
 while (currentCalculation < numberOfCalculations) {
   const firstNumber = getFloatInput("Enter the first number:");
-  const operator = getOperatorInput(
-    OPERATORS,
-    "Enter an operator (+, -, *, /):",
-  );
+  const operator = getOperatorInput(OPERATORS, "Enter an operator");
   const secondNumber = getFloatInput("Enter the second number:");
 
   if (firstNumber ?? operator ?? secondNumber) {
