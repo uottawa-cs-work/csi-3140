@@ -2,8 +2,172 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Assignment V - Question V</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment I - Question V</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+
+  <body>
+    <header>
+      <div class="container">
+        <h1>The Gupta</h1>
+        <p class="headline">
+          Full Stack Developer | Problem Solver | Innovator
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="summary">
+        <h2>Summary</h2>
+        <p>
+          Highly motivated and detail-oriented Full Stack Developer with 3+
+          years of experience in building and deploying scalable web
+          applications. Proficient in both front-end and back-end technologies,
+          with a strong passion for creating intuitive user experiences and
+          robust server-side solutions.
+        </p>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <article class="education-item">
+          <h3>Bachelor of Science in Computer Science</h3>
+          <p>University of Ottawa | Graduated: April 2025</p>
+          <p>
+            <em>Relevant Courses:</em> Data Structures & Algorithms, Web
+            Development, Databases, Software Engineering
+          </p>
+        </article>
+      </section>
+
+      <section id="experience">
+        <h2>Experience</h2>
+        <article class="experience-item">
+          <h3>Junior Software Engineer</h3>
+          <p>Blake Inc. | June 2022 - Present</p>
+          <ul>
+            <li>
+              Developed and maintained RESTful APIs using Node.js and Express.js
+              for various client projects.
+            </li>
+            <li>
+              Implemented responsive user interfaces with React.js, improving
+              user engagement by 15%.
+            </li>
+            <li>
+              Collaborated with cross-functional teams to define, design, and
+              ship new features.
+            </li>
+            <li>
+              Managed SQL and NoSQL databases (PostgreSQL, MongoDB) for data
+              storage and retrieval.
+            </li>
+          </ul>
+        </article>
+
+        <article class="experience-item hidden" id="additional-experience">
+          <h3>Web Development Intern</h3>
+          <p>Hurdman | May 2021 - August 2021</p>
+          <ul>
+            <li>
+              Assisted in building a full-stack web application using Python
+              (Django) and HTML/CSS/JavaScript.
+            </li>
+            <li>
+              Contributed to front-end component development and basic database
+              modeling.
+            </li>
+          </ul>
+        </article>
+        <button id="toggle-experience">Show More</button>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+          <li>
+            <strong>Languages:</strong> JavaScript, Python, HTML5, CSS3, SQL
+          </li>
+          <li><strong>Front-end:</strong> React.js, Redux, TailwindCSS</li>
+          <li>
+            <strong>Back-end:</strong> Node.js, Express.js, Django, RESTful APIs
+          </li>
+          <li>
+            <strong>Databases:</strong> PostgreSQL, MongoDB, MySQL, Firebase
+          </li>
+          <li>
+            <strong>Tools & Platforms:</strong> Git, GitHub, Docker, AWS (S3,
+            EC2)
+          </li>
+          <li>
+            <strong>Methodologies:</strong> Agile, Scrum, Responsive Design
+          </li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <p>
+          Email:
+          <a href="mailto:fake.the.gupta@example.com"
+            >fake.the.gupta@example.com</a
+          >
+        </p>
+        <p>
+          LinkedIn:
+          <a href="https://www.linkedin.com/in/fake-the-gupta" target="_blank"
+            >linkedin.com/in/fake-the-gupta</a
+          >
+        </p>
+        <p>
+          GitHub:
+          <a href="https://github.com/fake-the-gupta" target="_blank"
+            >github.com/fake-the-gupta</a
+          >
+        </p>
+      </section>
+
+      <section id="feedback-form">
+        <h2>Leave a Message / Feedback</h2>
+        <form id="recruiter-form">
+          <p>
+            <label for="recruiterName">Your Name:</label>
+            <input
+              type="text"
+              id="recruiterName"
+              name="recruiterName"
+              required
+            />
+            <span class="error-message" id="name-error"></span>
+          </p>
+          <p>
+            <label for="recruiterEmail">Your Email:</label>
+            <input
+              type="email"
+              id="recruiterEmail"
+              name="recruiterEmail"
+              required
+            />
+            <span class="error-message" id="email-error"></span>
+          </p>
+          <p>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <span class="error-message" id="message-error"></span>
+          </p>
+          <button type="submit">Send Message</button>
+          <p class="success-message" id="form-success"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Elias Vance. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
