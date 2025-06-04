@@ -107,7 +107,7 @@ while (currentCalculation < numberOfCalculations) {
   const operator = getOperatorInput(OPERATORS, "Enter an operator");
   const secondNumber = getFloatInput("Enter the second number:");
 
-  if (firstNumber ?? operator ?? secondNumber) {
+  if (firstNumber === null || operator === null || secondNumber === null) {
     currentCalculation++;
     continue;
   }
