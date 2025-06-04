@@ -15,3 +15,22 @@ h1 {
   left: 20px;
   animation: floatAround 20s ease-in-out infinite;
 }
+
+@keyframes floatAround {
+  0% {
+    left: -100px;
+    opacity: 0;
+  }
+  25% {
+    left: 50px;
+    opacity: 1;
+  }
+  75% {
+    left: calc(100% - 250px);
+    opacity: 1;
+  }
+  100% {
+    left: calc(100% + 100px);
+    opacity: 0;
+  }
+}
