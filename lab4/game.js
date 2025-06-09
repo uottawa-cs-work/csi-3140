@@ -49,6 +49,16 @@ function buildResultsPage() {
     : "";
 
   const performanceFeedback = gameStatus === "won" ? getPerformanceFeedback(guessCount) : "";
+  const statusClass = `status ${gameStatus}`;
+
+  let statusMessage = "";
+  if (gameStatus === "won") {
+    statusMessage = `🎉 You guessed it right!`;
+  } else if (gameStatus === "lost") {
+    statusMessage = `💀 You ran out of guesses! The correct number was <strong>${secretNumber}</strong>.`;
+  } else {
+    statusMessage = `🚪 You cancelled the game.`;
+  }
 
   document.write(`
     <html>
@@ -59,11 +69,9 @@ function buildResultsPage() {
       <body>
         <div class="result-box">
           <h1>Game Over</h1>
-          <p class="status">Status: ${gameStatus.toUpperCase()}</p>
-          <p>You made <strong>${guessCount}</strong> guesses.</p>
+          <p class="${statusClass}">${statusMessage}</p>
+          <p>You made <strong>${guessCount}</strong> guess(es).</p>
           ${performanceFeedback}
-          ${gameStatus === "lost" ? `<p>The correct number was <strong>${secretNumber}</strong>.</p>` : ""}
-          ${gameStatus === "cancelled" ? `<p>You exited the game before finishing.</p>` : ""}
           ${guessHistoryHTML}
         </div>
       </body>

@@ -32,6 +32,29 @@ p {
 }
 
 .guess-history {
-  font-style: italic;
+  margin-top: 10px;
+}
+
+.status {
+  font-weight: bold;
+  font-size: 1.4em;
+  margin-bottom: 15px;
+}
+
+.status.won {
+  color: #27ae60; /* green */
+}
+
+.status.lost {
+  color: #e74c3c; /* red */
+}
+
+.status.cancelled {
+  color: #f39c12; /* orange */
+}
+
+.feedback {
+  font-size: 1.1em;
+  color: #34495e;
   margin-top: 10px;
 }
