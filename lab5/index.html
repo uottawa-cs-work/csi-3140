@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Simple Blog</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>My Simple Blog</h1>
+      <p class="subtitle">A client-side blog powered by JavaScript</p>
+    </header>
+
+    <main class="main-content">
+      <section class="posts-section">
+        <h2>Latest Posts</h2>
+        <div id="postsContainer" class="posts-container"></div>
+      </section>
+
+      <aside class="form-section">
+        <h2>Create a New Post</h2>
+        <form id="postForm">
+          <label>Title</label>
+          <input type="text" id="titleInput" required />
+
+          <label>Author</label>
+          <input type="text" id="authorInput" required />
+
+          <label>Content</label>
+          <textarea id="contentInput" rows="5" required></textarea>
+
+          <button type="submit">Create Post</button>
+        </form>
+      </aside>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
