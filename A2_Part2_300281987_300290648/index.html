@@ -13,17 +13,29 @@
 
       <form class="form">
         <div class="form-section__input-group">
-          <input type="text" id="titleInput" placeholder="e.g. Inception" />
-          <select id="genreSelect">
-            <option value="Action">Action</option>
-            <option value="Comedy">Comedy</option>
-            <option value="Drama">Drama</option>
-            <option value="Horror">Horror</option>
-            <option value="Sci-Fi">Sci-Fi</option>
-            <option value="Thriller">Thriller</option>
-          </select>
-          <div class="stars" id="starRating"></div>
+          <div class="labelled-input">
+            <label for="titleInput">Title</label>
+            <input type="text" id="titleInput" placeholder="e.g. Inception" />
+          </div>
+
+          <div class="labelled-input">
+            <label for="genreSelect">Genre</label>
+            <select id="genreSelect">
+              <option value="Action">Action</option>
+              <option value="Comedy">Comedy</option>
+              <option value="Drama">Drama</option>
+              <option value="Horror">Horror</option>
+              <option value="Sci-Fi">Sci-Fi</option>
+              <option value="Thriller">Thriller</option>
+            </select>
+          </div>
+
+          <div class="labelled-input">
+            <label for="genreSelect">Rating</label>
+            <div class="stars" id="starRating"></div>
+          </div>
         </div>
+
         <button id="addMovieBtn">Add Movie</button>
       </form>
 

@@ -39,13 +39,24 @@ h1 {
   width: 100%;
 }
 
+.labelled-input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.3rem;
+}
+
+.labelled-input label {
+  color: #ccc;
+}
+
 .controls {
   background: #1e1e1e;
 }
 
 .form-section__input-group input,
 .form-section__input-group select {
-  width: 100%;
+  max-width: 100%;
   padding: 0.5rem;
   background: #2e2e2e;
   color: #fff;
