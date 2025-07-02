@@ -16,13 +16,13 @@ const editStarRating = document.getElementById("editStarRating");
 const saveEditBtn = document.getElementById("saveEditBtn");
 const cancelEditBtn = document.getElementById("cancelEditBtn");
 
+let addRating = 0;
+let editRating = 0;
+
 loadMovies();
 renderMovies();
 initStars(starRating, "add");
 initStars(editStarRating, "edit");
-
-let addRating = 0;
-let editRating = 0;
 
 function loadMovies() {
   const data = localStorage.getItem("movies");
@@ -39,21 +39,9 @@ function initStars(container, mode) {
     const star = document.createElement("span");
     star.textContent = "★";
     star.dataset.value = i;
-    star.addEventListener("mouseover", () => highlightStars(i, container));
-    star.addEventListener("mouseout", () => resetStars(container, mode));
-    star.addEventListener("click", () => {
-      if (mode === "add") addRating = i;
-      else editRating = i;
-      resetStars(container, mode);
-    });
+    star.dataset.mode = mode;
     container.appendChild(star);
   }
-}
-
-function highlightStars(rating, container) {
-  [...container.children].forEach((star, idx) => {
-    star.classList.toggle("hover", idx < rating);
-  });
 }
 
 function resetStars(container, mode) {
@@ -64,6 +52,46 @@ function resetStars(container, mode) {
   });
 }
 
+function highlightStars(rating, container) {
+  [...container.children].forEach((star, idx) => {
+    star.classList.toggle("hover", idx < rating);
+  });
+}
+
+// Event delegation for star hover and click
+document.addEventListener("mouseover", (e) => {
+  if (e.target.closest(".stars span")) {
+    const star = e.target;
+    const container = star.parentElement;
+    const rating = Number(star.dataset.value);
+    highlightStars(rating, container);
+  }
+});
+
+document.addEventListener("mouseout", (e) => {
+  if (e.target.closest(".stars span")) {
+    const star = e.target;
+    const container = star.parentElement;
+    const mode = star.dataset.mode;
+    resetStars(container, mode);
+  }
+});
+
+document.addEventListener("click", (e) => {
+  const star = e.target.closest(".stars span");
+  if (star) {
+    const value = Number(star.dataset.value);
+    const mode = star.dataset.mode;
+    if (mode === "add") {
+      addRating = value;
+    } else if (mode === "edit") {
+      editRating = value;
+    }
+    resetStars(star.parentElement, mode);
+  }
+});
+
+// Add movie
 addMovieBtn.addEventListener("click", () => {
   const title = titleInput.value.trim();
   const genre = genreSelect.value;
@@ -93,6 +121,7 @@ addMovieBtn.addEventListener("click", () => {
   renderMovies();
 });
 
+// Render all movies
 function renderMovies() {
   movieList.innerHTML = "";
   const genre = genreFilter.value;
@@ -106,21 +135,25 @@ function renderMovies() {
 
     card.innerHTML = `
       <h4>${movie.title}</h4>
-      <div class="stars">${"★".repeat(movie.rating)}</div>
+      <div class="stars" data-mode="display">${"★".repeat(movie.rating)}</div>
       <div class="genre">${movie.genre}</div>
       <button data-action="edit" data-id="${movie.id}">✏️</button>
-      <button data-action="toggle" data-id="${movie.id}">👁️</button>
+      <button data-action="toggle" data-id="${movie.id}">✔️</button>
       <button data-action="remove" data-id="${movie.id}">❌</button>
     `;
     movieList.appendChild(card);
   });
 }
 
+// Event delegation for movie card buttons
 movieList.addEventListener("click", (e) => {
-  if (e.target.tagName !== "BUTTON") return;
-  const id = Number(e.target.dataset.id);
-  const action = e.target.dataset.action;
+  const button = e.target.closest("button");
+  if (!button) return;
+
+  const id = Number(button.dataset.id);
+  const action = button.dataset.action;
   const movie = movies.find((m) => m.id === id);
+  if (!movie) return;
 
   if (action === "edit") {
     currentEditId = id;
@@ -140,6 +173,7 @@ movieList.addEventListener("click", (e) => {
   }
 });
 
+// Save edited movie
 saveEditBtn.addEventListener("click", () => {
   const movie = movies.find((m) => m.id === currentEditId);
   movie.title = editTitle.value.trim();
@@ -154,8 +188,10 @@ cancelEditBtn.addEventListener("click", () => {
   editModal.classList.add("hidden");
 });
 
+// Filter by genre
 genreFilter.addEventListener("change", renderMovies);
 
+// Sort buttons
 sortButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     const key = btn.dataset.sort;
@@ -167,4 +203,3 @@ sortButtons.forEach((btn) => {
     renderMovies();
   });
 });
-

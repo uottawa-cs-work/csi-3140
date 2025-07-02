@@ -130,6 +130,7 @@ h1 {
 
 .movie-card .stars {
   margin: 10px 0;
+  color: gold
 }
 
 .movie-card button {
@@ -181,17 +182,18 @@ h1 {
 
 .modal-content {
   background-color: #1e1e1e;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
   width: 300px;
   text-align: center;
-  color: white;
+  color: red;
 }
 
 .modal-content input,
 .modal-content select {
   width: 100%;
-  padding: 10px;
+  margin: auto;
+  padding: auto;
   background: #2e2e2e;
   border: 1px solid #444;
   color: white;
@@ -201,7 +203,9 @@ h1 {
 
 .modal-actions {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
 }
 
 .modal-actions button {
