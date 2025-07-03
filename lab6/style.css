@@ -1,0 +1,110 @@
+/* style.css */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  background: #fdfdfd;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 0;
+  color: #333;
+}
+
+header p {
+  font-size: 1.2em;
+  margin-top: 5px;
+  color: #777;
+}
+
+#controls {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+button,
+input[type="color"] {
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+#saveBtn {
+  background-color: #4caf50;
+  color: white;
+}
+
+#clearBtn {
+  background-color: #f44336;
+  color: white;
+}
+
+#colorPicker {
+  border: 2px solid #ccc;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(32, 15px);
+  grid-template-rows: repeat(32, 15px);
+  gap: 1px;
+  justify-content: center;
+  margin: 0 auto 30px;
+}
+
+.pixel {
+  width: 15px;
+  height: 15px;
+  background: white;
+  border: 1px solid #eee;
+}
+
+#art-display h2 {
+  margin-bottom: 10px;
+}
+
+#artDisplayContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.mini-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 5px);
+  grid-template-rows: repeat(8, 5px);
+  gap: 1px;
+}
+
+.mini-grid-full {
+  display: grid;
+  grid-template-columns: repeat(32, 4px);
+  grid-template-rows: repeat(32, 4px);
+  gap: 0px;
+  border: 1px solid #ccc;
+}
+
+.mini-pixel-full {
+  width: 4px;
+  height: 4px;
+}
+
+.mini-pixel {
+  width: 5px;
+  height: 5px;
+  background: white;
+  border: 1px solid #ccc;
+}

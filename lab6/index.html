@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pixel Pad</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Pixel Pad</h1>
+    <p>Click and drag to draw!</p>
+  </header>
+
+  <div id="controls">
+    <input type="color" id="colorPicker" value="#000000" />
+    <button id="saveBtn">Save Art</button>
+    <button id="clearBtn">Clear</button>
+  </div>
+
+  <div id="grid-container"></div>
+
+  <section id="art-display">
+    <h2>Saved Art</h2>
+    <div id="artDisplayContainer">
+      <p>No art saved yet.</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
