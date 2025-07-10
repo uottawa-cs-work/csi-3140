@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Canvas Shape Drawer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="left-column">
+      <h2>Canvas</h2>
+      <canvas id="myCanvas" width="400" height="400"></canvas>
+      <button id="loadButton">Load Initial Shapes from XML</button>
+    </div>
+
+    <div class="right-column">
+      <h2>Create New Shape</h2>
+      <form id="createShapeForm">
+        <label>Type:
+          <select id="shapeType">
+            <option value="rectangle">Rectangle</option>
+            <option value="circle">Circle</option>
+          </select>
+        </label>
+
+        <label>Color:
+          <input type="color" id="shapeColor" value="#FF0000" />
+        </label>
+
+        <label>X Coordinate:
+          <input type="number" id="shapeX" />
+        </label>
+
+        <label>Y Coordinate:
+          <input type="number" id="shapeY" />
+        </label>
+
+        <label>Width/Radius:
+          <input type="number" id="shapeWidth" />
+        </label>
+
+        <label>Height:
+          <input type="number" id="shapeHeight" />
+        </label>
+
+        <button type="submit">Create and Add Shape</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
