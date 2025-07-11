@@ -2,7 +2,8 @@ body {
   font-family: sans-serif;
   background-color: #f4f4f4;
   margin: 0;
-  padding: 20px;
+  padding-inline: 20rem;
+  padding-block: 10rem;
 }
 
 .container {
@@ -48,3 +49,4 @@ input[type="color"] {
   border: none;
   cursor: pointer;
 }
+
