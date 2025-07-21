@@ -11,16 +11,15 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("get-users.php")
     .then((res) => res.json())
     .then((users) => {
+      const defaultFilterOption = new Option("All Users", -1);
+      userFilter.appendChild(defaultFilterOption);
+
       users.forEach((user) => {
-        const option1 = new Option(user.name, user.id);
-        const option2 = new Option(user.name, user.id);
-        userFilter.add(option1.cloneNode(true));
-        userSelect.add(option2);
+        const option1 = new Option(user.username, user.id);
+        const option2 = new Option(user.username, user.id);
+        userFilter.appendChild(option1);
+        userSelect.appendChild(option2);
       });
-      userFilter.insertAdjacentHTML(
-        "afterbegin",
-        '<option value="">All Users</option>',
-      );
     });
 
   // Search books
