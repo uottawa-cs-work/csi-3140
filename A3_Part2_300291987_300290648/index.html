@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Lookup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .container {
+      border: 1px solid #999;
+      padding: 20px;
+      max-width: 700px;
+    }
+
+    h1, h2 {
+      margin-top: 0;
+    }
+
+    label, input, select, button {
+      margin: 4px 0;
+    }
+
+    .form-row {
+      margin-bottom: 10px;
+    }
+
+    .book {
+      margin-bottom: 15px;
+    }
+
+    .book-title {
+      font-weight: bold;
+    }
+
+    .message {
+      font-style: italic;
+      color: #555;
+    }
+
+    #importStatus {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Example:</h2>
+  <div class="container">
+    <h1>Book Lookup</h1>
+
+    <h2>Search</h2>
+    <div class="form-row">
+      <input type="text" id="searchInput" placeholder="Search by title or author" />
+      <select id="genreFilter">
+        <option value="">All Genres</option>
+        <option>Fiction</option>
+        <option>Sci-Fi</option>
+        <option>History</option>
+      </select>
+      <select id="userFilter"></select>
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <h2>Add a New Book</h2>
+    <form id="addBookForm" class="form-row">
+      <input type="text" name="title" placeholder="Title" required />
+      <input type="text" name="author" placeholder="Author" required />
+      <select name="genre" required>
+        <option>Fiction</option>
+        <option>Sci-Fi</option>
+        <option>History</option>
+      </select>
+      <input type="number" name="year" placeholder="Year" required />
+      <select name="user_id" id="userSelect" required></select>
+      <button type="submit">Add Book</button>
+    </form>
+
+    <h2>Import Books from XML</h2>
+    <button id="importXmlBtn">Import Books</button>
+    <p id="importStatus"></p>
+
+    <h2>Results</h2>
+    <div id="results" class="form-row"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
