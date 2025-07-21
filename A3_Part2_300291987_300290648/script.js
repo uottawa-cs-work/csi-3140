@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
       bookDiv.appendChild(details);
 
       const user = document.createElement("p");
-      user.textContent = `Added by: ${book.user}`;
+      user.textContent = `Added by: ${book.username}`;
       bookDiv.appendChild(user);
 
       const delBtn = document.createElement("button");
