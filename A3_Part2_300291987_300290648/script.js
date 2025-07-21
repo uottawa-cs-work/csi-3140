@@ -28,8 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const genre = document.getElementById("genreFilter").value.trim();
     const userId = userFilter.value.trim();
 
-    const params = new URLSearchParams({ query, genre, user_id: userId });
-    fetch("search-books.php?" + encodeURIComponent(params.toString()))
+    const params = new URLSearchParams({
+      query: query || "",
+      genre: genre || "all",
+      user_id: userId || "all",
+    });
+    fetch(`search-books.php?${params.toString()}`)
       .then((res) => res.json())
       .then(displayResults)
       .catch(() => showMessage("Error fetching books."));
