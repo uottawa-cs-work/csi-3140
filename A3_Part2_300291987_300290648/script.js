@@ -56,8 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
   function deleteBook(id) {
     fetch("delete-book.php", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ id }),
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: `id=${encodeURIComponent(id)}`,
     }).then(() => searchBtn.click());
   }
 
