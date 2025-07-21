@@ -24,8 +24,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Search books
   searchBtn.addEventListener("click", () => {
-    const query = document.getElementById("searchInput").value.trim();
-    const genre = document.getElementById("genreFilter").value.trim();
+    const queryElement = document.getElementById("searchInput");
+    const genreElement = document.getElementById("genreFilter");
+
+    const query = queryElement.value.trim();
+    const genre = genreElement.value.trim();
     const userId = userFilter.value.trim();
 
     const params = new URLSearchParams({
@@ -35,7 +38,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     fetch(`search-books.php?${params.toString()}`)
       .then((res) => res.json())
-      .then(displayResults)
+      .then((books) => {
+        displayResults(books);
+        queryElement.value = "";
+        genreElement.value = "";
+        userFilter.value = "";
+      })
       .catch(() => showMessage("Error fetching books."));
   });
 
