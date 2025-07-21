@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("get-users.php")
     .then((res) => res.json())
     .then((users) => {
-      const defaultFilterOption = new Option("All Users", -1);
+      const defaultFilterOption = new Option("All Users", "");
       userFilter.appendChild(defaultFilterOption);
 
       users.forEach((user) => {
