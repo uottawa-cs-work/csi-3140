@@ -83,7 +83,11 @@ document.addEventListener("DOMContentLoaded", () => {
       bookDiv.className = "book";
 
       const title = document.createElement("p");
-      title.innerHTML = `<span class="book-title">${book.title}</span> by ${book.author}`;
+      const titleSpan = document.createElement("span");
+      titleSpan.className = "book-title";
+      titleSpan.textContent = book.title;
+      title.appendChild(titleSpan);
+      title.appendChild(document.createTextNode(` by ${book.author}`));
       bookDiv.appendChild(title);
 
       const details = document.createElement("p");
