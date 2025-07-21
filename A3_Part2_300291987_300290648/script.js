@@ -9,15 +9,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Load users into both dropdowns
   fetch("get-users.php")
-    .then(res => res.json())
-    .then(users => {
-      users.forEach(user => {
+    .then((res) => res.json())
+    .then((users) => {
+      users.forEach((user) => {
         const option1 = new Option(user.name, user.id);
         const option2 = new Option(user.name, user.id);
         userFilter.add(option1.cloneNode(true));
         userSelect.add(option2);
       });
-      userFilter.insertAdjacentHTML('afterbegin', '<option value="">All Users</option>');
+      userFilter.insertAdjacentHTML(
+        "afterbegin",
+        '<option value="">All Users</option>',
+      );
     });
 
   // Search books
@@ -28,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const params = new URLSearchParams({ query, genre, user_id: userId });
     fetch("search-books.php?" + params.toString())
-      .then(res => res.json())
+      .then((res) => res.json())
       .then(displayResults)
       .catch(() => showMessage("Error fetching books."));
   });
@@ -40,9 +43,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     fetch("add-book.php", {
       method: "POST",
-      body: formData
+      body: formData,
     })
-      .then(res => res.text())
+      .then((res) => res.text())
       .then(() => {
         addBookForm.reset();
         searchBtn.click();
@@ -55,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch("delete-book.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ id })
+      body: JSON.stringify({ id }),
     }).then(() => searchBtn.click());
   }
 
@@ -64,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
     resultsDiv.innerHTML = "";
     if (!books.length) return showMessage("No books found.");
 
-    books.forEach(book => {
+    books.forEach((book) => {
       const bookDiv = document.createElement("div");
       bookDiv.className = "book";
 
@@ -97,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Import books from XML
   importBtn.addEventListener("click", () => {
     fetch("load-books-from-xml.php")
-      .then(res => res.text())
+      .then((res) => res.text())
       .then(() => {
         importStatus.textContent = "Books imported successfully!";
         importStatus.style.color = "green";
