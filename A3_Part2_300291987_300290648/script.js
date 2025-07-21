@@ -25,11 +25,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // Search books
   searchBtn.addEventListener("click", () => {
     const query = document.getElementById("searchInput").value.trim();
-    const genre = document.getElementById("genreFilter").value;
-    const userId = userFilter.value;
+    const genre = document.getElementById("genreFilter").value.trim();
+    const userId = userFilter.value.trim();
 
     const params = new URLSearchParams({ query, genre, user_id: userId });
-    fetch("search-books.php?" + params.toString())
+    fetch("search-books.php?" + encodeURIComponent(params.toString()))
       .then((res) => res.json())
       .then(displayResults)
       .catch(() => showMessage("Error fetching books."));
