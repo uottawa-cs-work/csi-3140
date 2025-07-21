@@ -5,48 +5,48 @@
     <lib:author>Frank Herbert</lib:author>
     <lib:genre>Sci-Fi</lib:genre>
     <lib:year>1965</lib:year>
-    <lib:user>1</lib:user>
+    <lib:user>alice</lib:user>
   </lib:book>
   <lib:book>
     <lib:title>1984</lib:title>
     <lib:author>George Orwell</lib:author>
     <lib:genre>Fiction</lib:genre>
     <lib:year>1949</lib:year>
-    <lib:user>2</lib:user>
+    <lib:user>dorsa</lib:user>
   </lib:book>
   <lib:book>
     <lib:title>Sapiens</lib:title>
     <lib:author>Yuval Noah Harari</lib:author>
     <lib:genre>History</lib:genre>
     <lib:year>2011</lib:year>
-    <lib:user>3</lib:user>
+    <lib:user>alice</lib:user>
   </lib:book>
   <lib:book>
     <lib:title>Foundation</lib:title>
     <lib:author>Isaac Asimov</lib:author>
     <lib:genre>Sci-Fi</lib:genre>
     <lib:year>1951</lib:year>
-    <lib:user>1</lib:user>
+    <lib:user>dorsa</lib:user>
   </lib:book>
   <lib:book>
     <lib:title>The Iliad</lib:title>
     <lib:author>Homer</lib:author>
     <lib:genre>History</lib:genre>
     <lib:year>-750</lib:year>
-    <lib:user>2</lib:user>
+    <lib:user>alice</lib:user>
   </lib:book>
   <lib:book>
     <lib:title>To Kill a Mockingbird</lib:title>
     <lib:author>Harper Lee</lib:author>
     <lib:genre>Fiction</lib:genre>
     <lib:year>1960</lib:year>
-    <lib:user>1</lib:user>
+    <lib:user>dorsa</lib:user>
   </lib:book>
   <lib:book>
     <lib:title>Brave New World</lib:title>
     <lib:author>Aldous Huxley</lib:author>
     <lib:genre>Fiction</lib:genre>
     <lib:year>1932</lib:year>
-    <lib:user>3</lib:user>
+    <lib:user>alice</lib:user>
   </lib:book>
 </lib:library>
